@@ -7,57 +7,65 @@ import (
 
 func main() {
 
-	log.Println("4+3=", soma())
-	log.Println("7-4=", subtração())
-	log.Println("35/7=", divisão())
-	log.Println("3*7=", multiplicação())
-	log.Println("2⁷", exp())
-	log.Println("a circunferencia de um circulo de raio 7 é =", circunferencia())
-	log.Println("7!=", fatorial(7))
+	som := soma(3,4)
+	sub := subtracao(7,4)
+	div := divisao(35,5)
+	mul := multiplicacao(3,4)
+	expo := exp(7)
+	cir := circunferencia(7)
+	fat := fatorial(7)
+
+	log.Println(3,"+",4,"=", som)
+	log.Println(7,"-",4,"=", sub)
+	log.Println(35,"/",5,"=", div)
+	log.Println(3,"*",4,"=", mul)
+	log.Println(2,"^",7,"=", expo)
+	log.Println("pi", "*" ,2,"*",7,"=", cir)
+	log.Println(7,"! =", fat)
 
 }
 
-func soma() int{
+func soma(n1 uint, n2 uint) uint{
 
-	return 4+3
-
-}
-
-func subtração() int {
-
-	return 7-4
+	return n1+n2
 
 }
 
-func divisão() int {
+func subtracao(n1 uint,  n2 uint ) uint {
 
-	return 35/5
-
-}
-
-func multiplicação() int {
-
-	return 3*7
+	return n1-n2
 
 }
 
-func exp() float64 {
+func divisao(n1 uint, n2 uint) uint {
 
-	return math.Exp2(7)
-
-}
-
-func circunferencia() float64 {
-
-	return math.Pi * 2 * 7
+	return n1/n2
 
 }
 
-func fatorial(x int) int {
-	if x == 1 {
-		return x
+func multiplicacao(n1 uint, n2 uint) uint {
+
+	return n1*n2
+
+}
+
+func exp(n1 float64) float64 {
+
+	return math.Exp2(n1)
+
+}
+
+func circunferencia(n1 float64) float64 {
+
+	return math.Pi * n1 * 2
+
+}
+
+func fatorial(n1 int) int {
+	if n1 == 1 {
+		return n1
 	}
-	return x * fatorial(x-1)
+	return n1 * fatorial(n1-1)
 
 }
 	
