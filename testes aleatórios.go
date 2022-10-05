@@ -2,9 +2,8 @@ package main
 
 import (
 	"log"
-)
-import
 	"math"
+)
 
 func main() {
 
