@@ -12,3 +12,4 @@ func main() {
 	log.Println(x)
 }
 // cap.9 ex.4
+// Nos próximos exercicios, ir variando os tipos de inteiros 
