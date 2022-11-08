@@ -7,10 +7,10 @@ func main() {
 	log.Println(x)
 }
 func Soma(i ...int) int {
-	total := 0
+	soma := 0
 
 	for _, v := range i {
-		total += v
+		soma += v
 	}
-	return total
+	return soma
 }
